@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-scotland-blue: #005EB8;
+  --color-scotland-dark: #002B54;
+  --color-scotland-light: #E6F0F9;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-200;
+  --color-bg-tooltip: #fff;
+  --color-border-tooltip: #E2E8F0;
+  --color-bg-cursor: #F1F5F9;
+  --color-text-tooltip: #1e293b;
+}
+
+.dark body {
+  --color-bg-tooltip: #1e293b;
+  --color-border-tooltip: #334155;
+  --color-bg-cursor: #334155;
+  --color-text-tooltip: #f1f5f9;
+}
